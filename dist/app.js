@@ -50,6 +50,7 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         previousProgressHeight = newState.blockchain_state.sync.sync_progress_height;
         synced = newState.blockchain_state.sync.synced;
     }
+    bar.stop();
     console.log('✨ Synced! ✨');
 });
 main();

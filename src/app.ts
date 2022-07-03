@@ -49,6 +49,7 @@ const main = async () => {
     previousProgressHeight = newState.blockchain_state.sync.sync_progress_height;
     synced = newState.blockchain_state.sync.synced;
   }
+  bar.stop();
   console.log('✨ Synced! ✨');
 };
 
