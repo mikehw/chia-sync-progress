@@ -52,6 +52,7 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
     }
     bar.stop();
     console.log('✨ Synced! ✨');
+    process.exit();
 });
 main();
 function sleep(ms) {

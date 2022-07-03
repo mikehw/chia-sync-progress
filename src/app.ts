@@ -27,7 +27,6 @@ const main = async () => {
   const client = new FullNode(GetFullNodeRPCInfo());
   const currentState = await client.getBlockchainState();
   let synced = currentState.blockchain_state.sync.synced;
-
   bar.start(
     currentState.blockchain_state.sync.sync_tip_height,
     currentState.blockchain_state.sync.sync_progress_height,
@@ -51,6 +50,7 @@ const main = async () => {
   }
   bar.stop();
   console.log('✨ Synced! ✨');
+  process.exit();
 };
 
 main();
